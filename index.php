@@ -354,7 +354,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading bold">Desenvolvimento de websites</h4>
-                                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+                                Site atraente, prático e com layout que se adapta para visualização em Celulares / Tablets.
                             </div>
                         </div>
 
@@ -367,7 +367,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading bold">Aplicativos</h4>
-                                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+                                Desenvolvimento de Aplicativos para Android, aplicativos sob medida, para atender as necessidades
                             </div>
                         </div>
 
@@ -383,7 +383,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading bold">Suporte de TI</h4>
-                                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+                                Suporte tecnológico para solucionar qualquer problema ou dúvida relacionada ao seu computador, notebook ou smartphone
                             </div>
                         </div>
 
@@ -395,7 +395,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading bold">Backup de Dados</h4>
-                                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+                                solução completa em Backup de Dados para garantir que os negócios continuarão existindo no caso de desastres, ou até mesmo de simples falhas tecnológicas ou humanas
                             </div>
                         </div>
 
@@ -447,8 +447,18 @@
 
 <footer>
     <div class="bg_frame"></div>
-    <div class="container-fluid footer">
-sdf
+    <div class="container-fluid footer hidden-xs">
+        <div class="col-md-8">
+            © Copyright 2003-2017 - Imixle Serviços e Sistemas. All Rights Reserved.
+        </div>
+        <div class="col-md-4 text-right">
+            Mapa do Site | Contato
+        </div>
+    </div>
+    <div class="container-fluid footer visible-xs">
+        <div class="col-md-12 center">
+            © Copyright 2003-2017 - Imixle Serviços e Sistemas.
+        </div>
     </div>
 </footer>
 
