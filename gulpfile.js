@@ -25,6 +25,7 @@ var styles = [
     vendor + 'bootstrap/dist/css/bootstrap.min.css',
     vendor + 'bootstrap/dist/css/bootstrap-theme.min.css',
     vendor + 'angular-material/angular-material.min.css',
+    './resources/assets/styles/**',
 ];
 
 // Array com as Fonts
@@ -50,6 +51,9 @@ elixier(function (mix) {
     mix.scripts(scripts);
 
 */
+   mix.less(
+       './resources/assets/less/app.less', './resources/assets/styles/app.css'
+   );
     mix.copy(images, './public/images/');
     mix.copy(fonts, './public/fonts/');
     mix.scripts(scripts);
