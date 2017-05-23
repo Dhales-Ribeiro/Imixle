@@ -15,6 +15,7 @@
     "angular-material": "^1.1.4",
     "angular-messages": "^1.6.4",
     "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
     "jquery": "^3.2.1",
     "laravel-elixir": "^6.0.0-15",
     "material-design-icons": "^3.0.1"
