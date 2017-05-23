@@ -230,7 +230,6 @@
 
 
 <div class="container-fluid im_nopadlr">
-
     <div class="container">
         <header>
             <div class="im_heroi">
@@ -430,7 +429,7 @@
                         </div>
                         <md-button md-no-ink class="md-raised"  style="color: #1067e4; font-weight: bold">Enviar</md-button>
                     </form>
-                   
+
 
                 </div>
 
