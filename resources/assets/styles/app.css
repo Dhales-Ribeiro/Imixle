@@ -1988,6 +1988,18 @@ label {
   right: 0;
   bottom: 0;
 }
+.hero-gear2 {
+  background: url('') center center no-repeat;
+  width: 272px;
+  height: 196px;
+  position: absolute;
+  top: 111px;
+  right: 0;
+  bottom: 0;
+}
+.titles {
+  padding: 50px 12px 50px;
+}
 .intro p {
   display: inline-block;
   font-size: 1.4em;

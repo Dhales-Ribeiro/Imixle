@@ -13,6 +13,7 @@ var scripts = [
     vendor + 'jquery/dist/jquery.min.js',
     vendor + 'bootstrap/dist/js/bootstrap.min.js',
     vendor + 'angular/angular.min.js',
+    vendor + 'angular-ui-router/release/angular-ui-router.min.js',
     vendor + 'angular-animate/angular-animate.min.js',
     vendor + 'angular-aria/angular-aria.min.js',
     vendor + 'angular-messages/angular-messages.min.js',
@@ -41,16 +42,6 @@ var images = [
 ];
 
 elixier(function (mix) {
-   /* mix.less(
-        './resources/assets/less/app.less', './resources/assets/styles/app.css'
-    );
-
-    ;
-
-
-    mix.scripts(scripts);
-
-*/
    mix.less(
        './resources/assets/less/app.less', './resources/assets/styles/app.css'
    );
