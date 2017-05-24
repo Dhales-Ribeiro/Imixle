@@ -48,7 +48,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a ui-sref="/">INICIO</a></li>
+                <li class=""><a ui-sref="/">INICIO</a></li>
                 <li class=""><a ui-sref="sobre">SOBRE A IMIXLE</a></li>
                 <li class=""><a href="/news">SERVIÇOS</a></li>
                 <li class=""><a href="/products">CONTATO</a></li>
