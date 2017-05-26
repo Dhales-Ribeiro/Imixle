@@ -50,8 +50,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class=""><a ui-sref="/">INICIO</a></li>
                 <li class=""><a ui-sref="sobre">SOBRE A IMIXLE</a></li>
-                <li class=""><a href="/news">SERVIÇOS</a></li>
-                <li class=""><a href="/products">CONTATO</a></li>
+                <li class=""><a ui-sref="servicos">SERVIÇOS</a></li>
+                <li class=""><a ui-sref="contato">CONTATO</a></li>
             </ul>
 
         </div><!-- /.navbar-collapse -->
