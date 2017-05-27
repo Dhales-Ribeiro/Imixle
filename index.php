@@ -58,23 +58,20 @@
     </div>
 </nav>
 
-<div class="container-fluid im_nopadlr" ui-view></div>
+<div class="container-fluid im_nopadlr" ui-view ng-controller="applicationController"></div>
 
 <footer>
     <div class="bg_frame"></div>
     <div class="container-fluid footer hidden-xs">
         <div class="container">
             <div class="col-md-8">
-                © Copyright 2003-2017 - Imixle Serviços e Sistemas. All Rights Reserved.
-            </div>
-            <div class="col-md-4 text-right">
-                Mapa do Site | Contato
+                © Copyright 2003 -  <?php echo date("Y");?> | Imixle Serviços e Sistemas. All Rights Reserved.
             </div>
         </div>
     </div>
     <div class="container-fluid footer visible-xs">
         <div class="col-md-12 center">
-            © Copyright 2003-2017 - Imixle Serviços e Sistemas.
+            © Copyright 2003 - <?php echo date("Y");?> - Imixle Serviços e Sistemas.
         </div>
     </div>
 </footer>

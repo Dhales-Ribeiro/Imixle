@@ -111,6 +111,9 @@ a:focus {
   color: @link-color;
   text-decoration: none;
 }
+.bold{
+  font-weight: bold;
+}
 
 // -------------------------------------------------------------------------
 //  Configurando tamanho para small
@@ -361,13 +364,29 @@ ul li .material-icons, ul li a {
   vertical-align: middle;
   margin-bottom: .6em;
 }
+.card-hover{
+  box-shadow: none;
+  transition: all .3s;
+}
 .card-hover:hover{
   box-shadow: -1px 5px 25px -5px rgba(0,0,0,0.8);
 }
-.card-hover{
-   transition: all .3s;
-}
- .padding-tb{
+
+.padding-tb{
    padding-top: 48px;
    padding-bottom: 48px;
- }
+}
+.icon-featured {
+  background: rgb(63,81,181);
+  display: inline-block;
+  margin: 15px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #FFF;
+  font-size: 40px;
+  line-height: 110px;
+}

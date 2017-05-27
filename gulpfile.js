@@ -18,7 +18,11 @@ var scripts = [
     vendor + 'angular-aria/angular-aria.min.js',
     vendor + 'angular-messages/angular-messages.min.js',
     vendor + 'angular-material/angular-material.min.js',
+    vendor + 'angular-sanitize/angular-sanitize.min.js',
+    vendor + 'jquery.maskedinput/src/jquery.maskedinput.js',
     './app/config/**',
+    './app/controllers/**',
+    './app/jquery/**',
 ];
 
 // Array com os Styles

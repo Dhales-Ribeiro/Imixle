@@ -1,3 +1,8 @@
+<script>
+    jQuery(function($){
+        $("#form-tel").mask("(99) 99999-9999");
+    });
+</script>
 <div class="container">
     <header>
         <div class="im_heroi">
@@ -12,7 +17,7 @@
             </ul>
 
 
-            <md-button md-no-ink class="md-raised" style="padding: 0 48px; color: #1067e4; font-weight: bold">Saiba Mais</md-button>
+            <md-button md-no-ink class="md-raised" ui-sref="servicos" style="padding: 0 48px; color: #1067e4; font-weight: bold">Saiba Mais</md-button>
         </div>
         <div class="hero-gear visible-lg visible-md"></div>
     </header>
@@ -29,7 +34,7 @@
                 </p>
             </div>
             <div class="col-md-4" style="padding: 8px">
-                <md-button md-no-ink class="md-raised"  style="padding: 0 48px; color: #1067e4; font-weight: bold">Fale com a agente!</md-button>
+                <md-button md-no-ink class="md-raised" ui-sref="contato" style="padding: 0 48px; color: #1067e4; font-weight: bold">Fale com a agente!</md-button>
             </div>
         </div>
     </div>
@@ -115,7 +120,7 @@
                 <div class="col-sm-6">
                     <div class="media">
                         <div class="media-left">
-                            <md-button class="md-fab md-mini md-primary">
+                            <md-button class="md-fab md-primary" ui-sref="servicos">
                                 <md-icon class="material-icons">web</md-icon>
                             </md-button>
                         </div>
@@ -128,7 +133,7 @@
 
                     <div class="media">
                         <div class="media-left">
-                            <md-button class="md-fab md-mini md-primary">
+                            <md-button class="md-fab md-primary" ui-sref="servicos">
                                 <md-icon class="material-icons">android</md-icon>
                             </md-button>
                         </div>
@@ -144,7 +149,7 @@
                 <div class="col-sm-6">
                     <div class="media">
                         <div class="media-left">
-                            <md-button class="md-fab md-mini md-primary">
+                            <md-button class="md-fab md-primary" ui-sref="servicos">
                                 <md-icon class="material-icons">desktop_windows</md-icon>
                             </md-button>
                         </div>
@@ -156,13 +161,13 @@
 
                     <div class="media">
                         <div class="media-left">
-                            <md-button class="md-fab md-mini md-primary">
+                            <md-button class="md-fab md-primary" ui-sref="servicos">
                                 <md-icon class="material-icons">backup</md-icon>
                             </md-button>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading bold">Backup de Dados</h4>
-                            solução completa em Backup de Dados para garantir que os negócios continuarão existindo no caso de desastres, ou até mesmo de simples falhas tecnológicas ou humanas
+                            Solução completa em Backup de Dados para garantir que os negócios continuarão existindo no caso de desastres, ou até mesmo de simples falhas tecnológicas ou humanas
                         </div>
                     </div>
 
@@ -173,36 +178,53 @@
             <div class="col-md-4">
                 <h2 style="padding-bottom: 20px">Entre em <strong style="color:#5D9A01;">Contato</strong></h2>
 
-                <form class="col-sm-12">
+                <form class="col-sm-12" name="contact" method="post" action="contact-process.php">
                     <div class="form-group">
-                        <div class="col-sm-6" style="padding: 0 8px 0 0 !important;">
-                            <label for="exampleInputEmail1">Nome</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome">
+                        <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                            <label for="form-nome">Nome:<span class="red">*</span></label>
+                            <input name="nome" minlength="3" type="text" class="form-control" id="form-nome" placeholder="Nome" ng-model="nome" required>
                         </div>
-                        <div class="col-sm-6" style="padding: 0 8px 0 0 !important;">
-                            <label for="exampleInputPassword1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                        <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                            <label for="form-email">Email:<span class="red">*</span></label>
+                            <input type="email" name="email" class="form-control" id="form-email" placeholder="Email" ng-model="email" required>
                         </div>
 
                     </div>
 
-                    <div class="form-group" style="padding: 0 8px 0 0 !important;">
-                        <label for="exampleInputPassword2">Assunto</label>
-                        <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Assunto">
+                    <div class="form-group">
+                        <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                            <label for="form-tel">Telefone:<span class="red">*</span></label>
+                            <input type="tel" name="tel" class="form-control" id="form-tel" placeholder="Telefone" ng-model="tel" required>
+                        </div>
+                        <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                            <label for="form-ass">Assunto:<span class="red">*</span></label>
+                            <select name="assunto" class="form-control" id="form-ass" placeholder="Assunto" ng-model="assunto" required>
+                                <option value="aplicativos">Aplicativos</option>
+                                <option value="backup">Backup de Dados</option>
+                                <option value="suporte">Suporte</option>
+                                <option value="websites">Websites</option>
+                                <option value="outros" selected>Outros...</option>
+                            </select>
+                        </div>
+
                     </div>
 
-                    <div class="form-group" style="padding: 0 8px 0 0 !important;">
-                        <label>Mensagem*</label>
-                        <textarea maxlength="5000" data-msg-required="Por favor, escreva sua mensagem" rows="3" class="form-control" name="message" id="message"></textarea>
+                    <div class="col-sm-12" style="padding: 8px 8px 0 0 !important;">
+                        <div class="form-group" >
+                            <label for="form-mess">Mensagem:<span class="red">*</span></label>
+                            <textarea maxlength="5000" data-msg-required="Por favor, escreva sua mensagem" rows="3" class="form-control" name="menssage" id="form-mess" ng-model="menssage" required></textarea>
+                        </div>
                     </div>
-                    <md-button md-no-ink class="md-raised"  style="color: #1067e4; font-weight: bold">Enviar</md-button>
+                    <md-button md-no-ink class="md-raised" style="color: #1067e4; font-weight: bold" type="submit" ng-disabled="contact.$invalid">Enviar</md-button>
                 </form>
 
             </div>
 
         </div>
-        <p>&nbsp;</p>
-        <hr>
-        <p>&nbsp;</p>
+
     </div>
 </div>
+
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>

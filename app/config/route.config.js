@@ -18,6 +18,10 @@ application.config(function ($stateProvider, $urlRouterProvider) {
             url: '/servicos',
             templateUrl: '/views/servicos/index.html'
         })
+        .state('contato', {
+            url: '/contato',
+            templateUrl: '/views/contato/index.html'
+        })
 
 
 

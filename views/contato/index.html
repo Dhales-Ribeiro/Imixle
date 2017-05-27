@@ -1,0 +1,71 @@
+<script>
+    jQuery(function($){
+        $("#form-tel").mask("(99) 99999-9999");
+    });
+</script>
+<div class="container">
+    <header>
+        <div class="titles">
+            <h1 class="headline text-large im_font">
+                Entre em <strong style="color:#5D9A01;">CONTATO</strong>
+            </h1>
+        </div>
+        <div class="hero-gear2 visible-lg visible-md">
+            <img src="../images/icon_hero_gear_im2.png" style="height: 196px;">
+        </div>
+    </header>
+</div>
+<div class="container-fluid background_im">
+
+    <div class="container">
+        <h4>Fale com a gente</h4>
+        <p>Entender a necessidade da empresa é encontrar soluções automatizadas e inovadoras</p>
+    </div>
+</div>
+
+<div class="container padding-tb">
+
+    <form name="contactform" class="col-sm-8" method="post" action="contact-process.php">
+        <div class="form-group">
+            <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                <label for="form-nome">Nome:<span class="red">*</span></label>
+                <input name="nome" minlength="3" type="text" class="form-control" id="form-nome" placeholder="Nome" ng-model="nome" required>
+            </div>
+            <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                <label for="form-email">Email:<span class="red">*</span></label>
+                <input type="email" name="email" class="form-control" id="form-email" placeholder="Email" ng-model="email" required>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                <label for="form-tel">Telefone:<span class="red">*</span></label>
+                <input type="tel" name="tel" class="form-control" id="form-tel" placeholder="Telefone" ng-model="tel" required>
+            </div>
+            <div class="col-sm-6" style="padding: 8px 8px 0 0 !important;">
+                <label for="form-ass">Assunto:<span class="red">*</span></label>
+                <select name="assunto" class="form-control" id="form-ass" placeholder="Assunto" ng-model="assunto" required>
+                    <option value="aplicativos">Aplicativos</option>
+                    <option value="backup">Backup de Dados</option>
+                    <option value="suporte">Suporte</option>
+                    <option value="websites">Websites</option>
+                    <option value="outros" selected>Outros...</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="col-sm-12" style="padding: 8px 8px 0 0 !important;">
+            <div class="form-group" >
+                <label for="form-mess">Mensagem:<span class="red">*</span></label>
+                <textarea maxlength="5000" data-msg-required="Por favor, escreva sua mensagem" rows="3" class="form-control" name="menssage" id="form-mess" ng-model="menssage" required></textarea>
+            </div>
+        </div>
+        <md-button md-no-ink class="md-raised" style="color: #1067e4; font-weight: bold" type="submit" ng-disabled="contactform.$invalid">Enviar</md-button>
+    </form>
+
+</div>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
