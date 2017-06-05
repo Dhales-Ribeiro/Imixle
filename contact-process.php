@@ -47,7 +47,7 @@ $mail->Body    = <<<EOD
             <p>O contato é de: <b style="font-weight: bold">$form[nome]</b> com assunto: <b style="font-weight: bold">$form[assunto]</b></p>
             <p>E a menssagem: <b style="font-weight: bold">$form[menssage]</b></p>
             <p>Fone: <b style="font-weight: bold">$form[tel]</b></p>
-            <p>Conato: <b style="font-weight: bold">$form[email]</b></p>
+            <p>Contato: <b style="font-weight: bold">$form[email]</b></p>
            
     
             <p class="bold" style="font-weight: bold; color:rgb(93, 154, 1)">Grato, Equipe Imixle Serviços e Sistemas.</p>
