@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="demo">
+<head>
+    <head>
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
+
+        <title>Restalrant Page</title>
+
+        <!-- CSS -->
+        <link href="public/css/all.css" rel="stylesheet">
+
+        <!-- HTML5 shim e Respond.js para suporte no IE8 de elementos HTML5 e media queries -->
+        <!-- ALERTA: Respond.js não funciona se você visualizar uma página file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+</head>
+<body ng-controller="restalrantCTRL" layout="column" ng-cloak>
+<div class="preloader bg-brown-900">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!--- toolbar --->
+<md-toolbar class="bg-brown-900">
+    <div class="md-toolbar-tools">
+
+        <md-icon class="material-icons" style="color:#c6a325">restaurant</md-icon>
+
+        <h2 flex md-truncate></h2>
+
+        <md-button class="md-button hidden-sm hidden-xs" href="#inicio">
+            Início
+        </md-button>
+        <md-button class="md-button hidden-sm hidden-xs" href="#sobre">
+            Sobre
+        </md-button>
+        <md-button class="md-button hidden-sm hidden-xs" href="#cardapio">
+            Menu
+        </md-button>
+        <md-button class="md-button hidden-sm hidden-xs" href="#galery">
+            Galeria
+        </md-button>
+        <md-button class="md-button hidden-sm hidden-xs" href="#reserva">
+            Reservas
+        </md-button>
+
+        <md-button class="md-icon-button visible-xs visible-sm" ng-click="toggleLeft()">
+            <md-icon class="material-icons">menu</md-icon>
+        </md-button>
+
+    </div>
+</md-toolbar>
+<!--- end toolbar --->
+
+<section layout="row" flex>
+    <!--- menu left--->
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+        <md-content >
+            <md-list flex>
+                <md-list-item href="#inicio" ng-click="toggleLeft()">Início</md-list-item>
+                <md-list-item href="#sobre" ng-click="toggleLeft()">Sobre</md-list-item>
+                <md-list-item href="#cardapio" ng-click="toggleLeft()">Menu</md-list-item>
+                <md-list-item href="#galery" ng-click="toggleLeft()">Galeria</md-list-item>
+                <md-list-item href="#reserva" ng-click="toggleLeft()">Reservas</md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+    <!--- end menu left--->
+
+    <!--- conteudo principal --->
+    <md-content flex style="background-color: #FFF !important; overflow-x: hidden;">
+        <!-- BEGIN Intro -->
+        <div class="intro bg-brown-900 bg-img" id="inicio" style="background-image: url(images/img7.jpg);">
+            <div class="main-slider">
+                <div class="slider-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <div class="testimonials-carousel owl-carousel" id="testimonials-carousel">
+                                    <div class="testimonials-item aligncenter item intro-box-inner">
+                                        <div class="tst-name" style="color:#c6a325">
+                                            <h3>Melhor Culinária</h3>
+                                            <div class="seperator" style="background-image: url(images/seperator.png);"></div>
+                                        </div>
+                                        <div class="tst-text">
+                                            <p>Quickly aggregate B2B users and worldwide potentialities. Progressively plagiarize resource-leveling e-commerce through resource-leveling core competencies. Dramatically mesh low-risk high-yield alignments before transparent e-tailers.</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonials-item aligncenter item intro-box-inner">
+                                        <div class="tst-name" style="color:#c6a325">
+                                            <h3>Lugar Ideal</h3>
+                                            <div class="seperator" style="background-image: url(images/seperator.png);"></div>
+                                        </div>
+                                        <div class="tst-text ">
+                                            <p>Appropriately empower dynamic leadership skills after business portals. Globally myocardinate interactive supply chains with distinctive quality vectors. Globally revolutionize global sources through interoperable services.</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonials-item aligncenter item intro-box-inner">
+                                        <div class="tst-name" style="color:#c6a325">
+                                            <h3>Bom Descanso</h3>
+                                            <div class="seperator" style="background-image: url(images/seperator.png);"></div>
+                                        </div>
+                                        <div class="tst-text ">
+                                            <p>Dynamically target high-payoff intellectual capital for customized technologies. Objectively integrate emerging core competencies before process-centric communities. Dramatically evisculate holistic innovation rather than client-centric data.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Intro -->
+
+        <!-- BEGIN Features -->
+        <div class="features anchor" id="sobre">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="aligncenter" style="color:#c6a325">Sobre</h2>
+                        <div class="seperator" style="background-image: url(images/seperator.png);"></div>
+                        <div class="sub-title-section aligncenter">Here are several causes that make our template worth paying attention to</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="about-left section-left animated bounceInLeft slow go">
+                            <h4 class="sub-tit niconne">The History</h4>
+                            <p class="main-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <p class="main-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="screen-carousel owl-carousel" id="screen-carousel1">
+                            <div class="screen-item">
+                                <div class="screen-item-inner item ">
+                                    <img src="images/img11.jpg" alt="" title="" />
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <img src="images/img12.jpg" alt="" title="" />
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <img src="images/img13.jpg" alt="" title="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Features -->
+
+        <!-- BEGIN cardapio -->
+        <div class="between-section bg-img" style="background-image: url(images/img16.jpg);">
+            <div class="container" id="cardapio">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title aligncenter" style="color:#c6a325">Nosso menu de restaurantes</h2>
+                        <div class="sub-title-section aligncenter">Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change. Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#starters" aria-controls="starters" role="tab" data-toggle="tab">Entradas</a>
+                            </li>
+
+                            <li role="presentation">
+                                <a href="#soup-items" aria-controls="soup-items" role="tab" data-toggle="tab">Sopas</a>
+                            </li>
+
+                            <li role="presentation">
+                                <a href="#lunch" aria-controls="lunch" role="tab" data-toggle="tab">Almoço</a>
+                            </li>
+
+                            <li role="presentation">
+                                <a href="#dessert" aria-controls="dessert" role="tab" data-toggle="tab">Sobremesas</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content padding30">
+                            <div role="tabpanel" class="tab-pane fade in active" id="starters">
+                                <div class="menu-list row no-margin">
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img1.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img3.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                    </div>
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img1.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img3.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="soup-items">
+                                <div class="menu-list row no-margin">
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img1.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img3.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                    </div>
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img1.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img3.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div role="tabpanel" class="tab-pane fade" id="lunch">
+                                <div class="menu-list row no-margin">
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img11.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img12.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img13.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                    </div>
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img7.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img9.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="dessert">
+                                <div class="menu-list row no-margin">
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/des1.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/des2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/des3.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                    </div>
+
+                                    <div class="menu-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img1.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img2.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+
+                                        <!-- Menu box -->
+                                        <div class="menu-box no-margin">
+                                            <div class="food-col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="food-img bg-img" style="background-image: url(images/img3.jpg);">
+                                                    <p class="prices niconne">R$50,00</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="food-col-1 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="food-content">
+                                                    <h3 class="food-tit niconne">Baked cabbage</h3>
+                                                    <p class="food-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu box -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END cardapio -->
+
+
+        <!-- BEGIN Galery -->
+        <div class="price anchor">
+            <div class="container" id="galery">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title aligncenter" style="color:#c6a325">Galeria</h2>
+                        <div class="sub-title-section aligncenter">We want the template you downloaded look unique and new for such a long time as it is possible.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="screen-carousel owl-carousel" id="screen-carousel">
+                            <div class="screen-item">
+                                <div class="screen-item-inner item ">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-item-inner item">
+                                    <a href="images/placeholder-600x850.png" class="boxer" data-lightbox-gallery="gallery">
+                                        <img src="images/placeholder-600x850.png" alt="" title="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Galery -->
+
+
+
+
+        <!-- BEGIN Reserva -->
+        <div class="bg-img" style="background-image: url(images/img15.jpg);">
+            <div class="dark-overlay padding80">
+                <div class="container" id="reserva">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="section-title aligncenter" style="color:#c6a325">Reservas</h2>
+                            <div class="sub-title-section aligncenter">Reserve sua mesa</div>
+                        </div>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">person</i>
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">email</i>
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">date_range</i>
+                                    <input class="se-date form-control datepicker" placeholder="Date">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">alarm</i>
+                                    <input type="text" class="se-time form-control clockpicker" value="Time">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">group</i>
+                                    <input type="text" class="form-control" placeholder="Number of Person">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">group</i>
+                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">location_on</i>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Branch Name</option>
+                                        <option>New Orelans</option>
+                                        <option>Mystic Falls</option>
+                                        <option>Rosewood</option>
+                                        <option>London</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">person</i>
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group form-box">
+                                    <i class="material-icons form-icon">format_quote</i>
+                                    <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <md-button class="md-raised">Reservar Mesa</md-button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Reserva -->
+
+        <div class="bg-img" style="background-image: url(images/des1.jpg);">
+            <div class="dark-overlay">
+                <div class="container" id="">
+
+                    <div class="foot-inner padding50">
+                        <div class="foot-logo text-center">
+                            <img src="images/logo.png">
+                        </div>
+
+                        <div class="foot-link-block text-center">
+                            <a href="#" class="foot-link">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="foot-link">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="foot-link">
+                                <i class="fa fa-pinterest-p"></i>
+                            </a>
+
+                            <a href="#" class="foot-link">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+
+                            <a href="#" class="foot-link">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+
+                            <a href="#" class="foot-link">
+                                <i class="fa fa-vine"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="copy-rights padding30">
+                        <p class="copy">&copy;Copy rights 2017</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </md-content>
+</section>
+<!-- Inclui todos os plugins minificados (abaixo), ou inclua arquivos separadados se necessário -->
+<script src="public/js/all.js"></script>
+</body>
+</html>
